@@ -17,3 +17,4 @@ deploy:
   bucket: "innovation-lab.cz"
   skip_cleanup: true
   region: eu-central-1
+  acl: public_read

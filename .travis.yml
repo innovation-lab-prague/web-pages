@@ -19,5 +19,6 @@ deploy:
   bucket: innovation-lab.cz
   acl: public_read
   skip_cleanup: false
+  region: eu-central-1
   on:
     repo: StanSiska/inno-lab-web

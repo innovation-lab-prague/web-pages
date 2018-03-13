@@ -6,8 +6,6 @@ install: npm install
 script:
 - npm test
 - gulp
-- git clean -df
-- git checkout -- .
 cache:
   directories:
   - node_modules

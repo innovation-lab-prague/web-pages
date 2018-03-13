@@ -20,5 +20,7 @@ deploy:
   acl: public_read
   skip_cleanup: true
   region: eu-central-1
+  local_dir: ./
+  endpoint: innovation-lab.cz.s3-website.eu-central-1.amazonaws.com
   on:
     repo: StanSiska/inno-lab-web

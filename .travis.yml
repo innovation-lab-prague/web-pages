@@ -14,9 +14,7 @@ deploy:
   access_key_id: "AKIAJ3MWH4VLU7OLMTUQ"
   secret_access_key:
     secure: cur1Fu8afHOSEvgwsPujIhOEsZ+/4tIttbxBUlZPKCfg5I+IkYHHbGof3shvEqKaESTAqSZrGOLmGh/quNBhYPE564gvtF6CMEud6A0urUm1llXdFPhaNuMZvEoMsyiTfvmHTeivUIxboJM7ixXj9yvGR8g9+HIMZXn5AjLv8Us+h9IfiL1vUDD/SLii+0Tj5kCRbpAcUAvhnideHUkEIjWJ65sNV2mh/80fpiShF4zF+Fu/mlVre2eqc834i2aC9CujgItcZjfegR0n8oyDSwikb0k5XVqYga7OxfmvWry5+0VC1HQ110s60lLzIRrTY/2BTEbkwcxMtAotwkUxK7sGQFStnONJVk9CpDIq6+dCkc19GcMFc3iLqMheiABVSpd9sPnbI5wJnn+K/7ZLkNgiDpKUtpMO61k8uv7yTQ4eGs5RQTufUhWc9eVKPCsTGnD2PF1H/Hn8IWEbtPMIJvTds0Bw3nI0pM7hPQ+OhwZgEOlVJKBoJ0CGejoMA2BJix7Sj54y8Uu+BIsZXVIh14wtOPgTDE78aOGEeJKzTBw93iG16WYsjPOYMtY+XGmsPApT9rRNA/RO6a7XYdPWL4kXm5EnkgDRp5NI3wK0E/gpZ+7LhfXbJLMf8ciXZgx4OJHK3c9109WIldrwPJ8Zb30av2cRjgIq64VjtUPaAlU=
-  bucket: innovation-lab.cz
+  bucket: "innovation-lab.cz.s3-website.eu-central-1.amazonaws.com"
   acl: public_read
   skip_cleanup: true
   region: eu-central-1
-  on:
-    repo: StanSiska/inno-lab-web

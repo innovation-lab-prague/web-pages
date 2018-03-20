@@ -15,6 +15,5 @@ deploy:
   acl: public_read
   skip_cleanup: true
   region: eu-central-1
-  access_key_id: AKIAJ3MWH4VLU7OLMTUQ
-  secret_access_key:
-    secure: ZVoI2bSzLPW25zjyNpQCYs0ofFDJ+6bUsgECCZEg6nZQf3EOECksOXVjvZPO3qasAdYDA9upyDGr5VYfan+/GV7v8WrhWbaCIxibwTD5PFLX1ug39mKSmDBEdQQjk6MkKJEbdBdyGqW17J2D1ugmdXORs7/kvSsnrY1P8OTSWeSxyhHzBwLkJDFisk8Kd5rXJsSxWAg+FhzWFWSHVQo+c3y3aNX9uvKyZLePNJxCJSaYxQ9q9Rrurj4qb2gTD+UBexAvbKRx8c3MUn0VaoT6GzLxv9QCuSh20xAOqXjUf1HFsoy6rN2lzIg2T2rJDB2wWCf83wrSuWGGRn3RvBu5cL7wuXW1HWLNMDTi6nXifer+ZjS6l2ebZ8AlSc/kad86m9L6TegMEbUtA+8l9ch5DYaoOk1i2FOj3h02CGOkiDCWCrB1LMg8hCCKd4At+8jxXyppxXeY4nXiTT2QaByT+H64l+yW8klMcilV7ZyneKbdCSQxK++Xum1XnCtevHiIN4WSVIOMYhzhQk9E3OiInZJ4jBdGgeupuQ9SkJpv9RdotoHeMP1Fhp94K+/G+/3oqgb6qHv+mYtrnGB4+8jQa4zMPcVBPNobEXMXV9DhaW8mEIQjALo0fr/IF2krgZuaT0TO/GBIydBqg/WbmSSbz1IHslm9/9y5jalkHLD3/f4=
+  access_key_id: $ac_key
+  secret_access_key: $se_key

@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.2.9
+    working_directory:  /home/circleci/inno-lab-web
+    steps:
+      - checkout
+      - run:
+          name: Install AWS-CLI
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get install -y python-pip python-dev
+      - run: 
+          name: Get pip
+          command: |
+            sudo pip install awscli
+      - run: 
+          name: Sync to S3 bucket
+          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --delete --region eu-central-1

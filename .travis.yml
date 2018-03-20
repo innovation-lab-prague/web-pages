@@ -11,7 +11,7 @@ cache:
   - node_modules
 deploy:
   provider: s3
-  bucket: innovation-lab.cz.s3-website.eu-central-1.amazonaws.com
+  bucket: innovation-lab.cz
   acl: public_read
   skip_cleanup: true
   region: eu-central-1

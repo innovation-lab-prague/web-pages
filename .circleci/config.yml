@@ -17,4 +17,4 @@ jobs:
             sudo pip install awscli
       - run: 
           name: Sync to S3 bucket
-          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --delete --region eu-central-1
+          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --region eu-central-1

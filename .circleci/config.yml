@@ -10,18 +10,8 @@ jobs:
           name: Install Python and AWS-CLI
           command: |
             sudo apt-get -y -qq update
-            sudo apt-get install -y python-pip python-dev ruby ruby-dev build-essential
+            sudo apt-get install -y python-pip python-dev
             sudo pip install awscli
-      - run:
-          name: Install Jekyll and dependencies
-          command: |
-            gem install jekyll bundler
-            bundle install
-      - run:
-          name: Jekyll Build step to create _site
-          command: |
-            jekyll --version
-            jekyll build
       - run: 
           name: Sync to S3 bucket
           command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --region eu-central-1

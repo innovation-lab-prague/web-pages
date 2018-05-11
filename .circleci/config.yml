@@ -2,19 +2,26 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.2.9
-    working_directory:  /home/circleci/inno-lab-web
+      - image: circleci/ruby:2.5.1
+    working_directory:  /home/circleci/innovation-lab-web
     steps:
       - checkout
-      - run:
-          name: Install AWS-CLI
+       - run:
+          name: Install Python and AWS-CLI
           command: |
             sudo apt-get -y -qq update
-            sudo apt-get install -y python-pip python-dev
-      - run: 
-          name: Get pip
-          command: |
+            sudo apt-get install -y python-pip python-dev ruby ruby-dev build-essential
             sudo pip install awscli
+      - run:
+          name: Install Jekyll and dependencies
+          command: |
+            gem install jekyll bundler
+            bundle install
+      - run:
+          name: Jekyll Build step to create _site
+          command: |
+            jekyll --version
+            jekyll build
       - run: 
           name: Sync to S3 bucket
           command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --region eu-central-1

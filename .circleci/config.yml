@@ -6,7 +6,7 @@ jobs:
     working_directory:  /home/circleci/innovation-lab-web
     steps:
       - checkout
-       - run:
+      - run:
           name: Install Python and AWS-CLI
           command: |
             sudo apt-get -y -qq update

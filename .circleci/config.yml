@@ -32,4 +32,4 @@ jobs:
 
       - run: 
           name: Sync to S3 bucket
-          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --exclude "node_modules/*" --region eu-central-1
+          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --exclude "node_modules/*" --exclude ".git/*' --region eu-central-1

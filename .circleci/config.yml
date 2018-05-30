@@ -6,6 +6,14 @@ jobs:
     working_directory:  /home/circleci/innovation-lab-web
     steps:
       - checkout
+
+      - run:
+          name: Fetch actual booking list from GitHub repo
+          command: |
+            sudo git clone https://github.com/innovation-lab-prague/booking.git $CIRCLE_WORKING_DIRECTORY/srctemp
+            sudo mv $CIRCLE_WORKING_DIRECTORY/srctemp $CIRCLE_WORKING_DIRECTORY/src
+            sudo rm -fr $CIRCLE_WORKING_DIRECTORY/srctemp
+
       - run:
           name: Install Python and AWS-CLI
           command: |

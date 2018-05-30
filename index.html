@@ -13,6 +13,11 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous" rel="stylesheet"></script> -->
+
+    
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -25,6 +30,47 @@
     <link href="css/creative.min.css" rel="stylesheet">
     <link href="css/innovation-lab.css" rel="stylesheet">
 
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+    <!-- Fullcalendar + Scheduler -->
+    <link href='vendor/fullcalendar-scheduler/scheduler.min.css' rel='stylesheet' />
+    <link href='vendor/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+    <link href='vendor/fullcalendar//fullcalendar.print.min.css' rel='stylesheet' media='print' />
+
+    <script src='vendor/fullcalendar/lib/jquery.min.js'></script>
+    <script src='vendor/fullcalendar/lib/moment.min.js'></script>
+    <script src='vendor/fullcalendar/fullcalendar.js'></script>
+    <script src='vendor/fullcalendar-scheduler/scheduler.js'></script>
+
+    <!-- Load webpacked Calendar -->
+    <script src='dist/custom.js'></script>
+    <script src='src/labRequests.js'></script>
+
+    <style>  
+      #script-warning {
+        display: none;
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        padding: 0 10px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        color: red;
+      }
+      #loading {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      #calendar {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      </style>
   </head>
 
   <body id="page-top">
@@ -39,11 +85,14 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/blog/index.html">Events & Blog</a>
+              <a class="nav-link js-scroll-trigger" href="#booking">Booking</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+              <a class="nav-link js-scroll-trigger" href="/blog/index.html">Events & Blog</a>
             </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Area</a>
             </li>
@@ -74,6 +123,27 @@
       </div>
     </header>
 
+  <section id="booking">
+    <div class='container'>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Booking Overview</h2>
+                <hr class="my-4">
+            </div>
+        </div>    
+            <div id='script-warning'>
+                <code>vendor/fullcalendar/php/get-events.php</code> must be running.
+              </div>
+            
+              <div id='loading'>loading...</div>
+
+            <div id='calendar'></div>
+    </div>
+      <div class="col-lg-8 mx-auto text-center"> </br>
+          <p class="mb-5">Instructions how to make self-booking available <a href="https://github.com/innovation-lab-prague/booking">on GitHub</a></p>
+      </div>
+    </section>
+  
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
@@ -254,7 +324,7 @@
     </section>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -265,7 +335,7 @@
     <!-- Custom scripts for this template -->
     <script src="js/creative.js"></script>
     <!-- <script src="js/creative.min.js"></script> -->
-
+  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115645543-1"></script>
     <script>

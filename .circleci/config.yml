@@ -6,12 +6,30 @@ jobs:
     working_directory:  /home/circleci/innovation-lab-web
     steps:
       - checkout
+
+      - run:
+          name: Fetch actual booking list from GitHub repo
+          command: |
+            sudo git clone https://github.com/innovation-lab-prague/booking.git $CIRCLE_WORKING_DIRECTORY/srctemp
+            sudo mv $CIRCLE_WORKING_DIRECTORY/srctemp $CIRCLE_WORKING_DIRECTORY/src
+            sudo rm -fr $CIRCLE_WORKING_DIRECTORY/srctemp
+
       - run:
           name: Install Python and AWS-CLI
           command: |
             sudo apt-get -y -qq update
-            sudo apt-get install -y python-pip python-dev
+            sudo apt-get install -y python-pip python-dev 
             sudo pip install awscli
+
+      - run:
+          name: Install Node + npm
+          command: |
+            sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            npm -v
+            npm install 
+            npm run build
+
       - run: 
           name: Sync to S3 bucket
-          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --region eu-central-1
+          command: aws s3 sync $CIRCLE_WORKING_DIRECTORY/ s3://innovation-lab.cz/ --exclude "node_modules/*" --exclude ".git/*" --region eu-central-1

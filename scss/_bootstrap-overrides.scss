@@ -29,3 +29,8 @@
     box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
   }
 }
+
+.btn-primary:focus, .btn-primary.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(39, 128, 227, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(39, 128, 227, 0.5);
+}

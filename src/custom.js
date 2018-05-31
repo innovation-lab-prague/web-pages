@@ -20,10 +20,11 @@ $(document).ready(function() {
       aspectRatio: 1.85,             // higher ratio, smaller calendar height
       defaultDate: '2018-06-01',
       navLinks: true,             // can click day/week names to navigate views
-      editable: true,
+      editable: false,
       eventLimit: true,           // allow "more" link when too many events
       weekNumbers: false,
       weekends: false,            // dont display Weekends
+      timeFormat: 'H:mm',
       minTime: '08:00:00',
       maxTime: '18:00:00',
       displayEventTime: true,     // Display event times

@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1
+      - image: circleci/node:7.10
     working_directory:  /home/circleci/innovation-lab-web
     steps:
       - checkout
@@ -11,7 +11,7 @@ jobs:
           name: Fetch actual booking list from GitHub repo
           command: |
             sudo git clone https://github.com/innovation-lab-prague/booking.git $CIRCLE_WORKING_DIRECTORY/srctemp
-            sudo mv $CIRCLE_WORKING_DIRECTORY/srctemp $CIRCLE_WORKING_DIRECTORY/src
+            sudo mv $CIRCLE_WORKING_DIRECTORY/srctemp/* $CIRCLE_WORKING_DIRECTORY/src/
             sudo rm -fr $CIRCLE_WORKING_DIRECTORY/srctemp
 
       - run:
@@ -22,10 +22,8 @@ jobs:
             sudo pip install awscli
 
       - run:
-          name: Install Node + npm
+          name: Install Webpack + dependencies
           command: |
-            sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-            sudo apt-get install -y nodejs
             npm -v
             npm install 
             npm run build

@@ -18,7 +18,6 @@ $(document).ready(function() {
       themeSystem: 'bootstrap4',  // options: bootstrap3, bootstrap4, jquery-ui
       // height: "100",
       aspectRatio: 1.85,             // higher ratio, smaller calendar height
-      defaultDate: '2018-06-01',
       navLinks: true,             // can click day/week names to navigate views
       editable: false,
       eventLimit: true,           // allow "more" link when too many events
@@ -27,6 +26,7 @@ $(document).ready(function() {
       timeFormat: 'H:mm',
       minTime: '08:00:00',
       maxTime: '18:00:00',
+      slotLabelFormat: 'H:mm',
       displayEventTime: true,     // Display event times
       resourceLabelText: 'Areas',
       schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',

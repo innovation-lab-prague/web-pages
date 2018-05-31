@@ -22,10 +22,8 @@ jobs:
             sudo pip install awscli
 
       - run:
-          name: Install Node + npm
+          name: Install Webpack + dependencies
           command: |
-            sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-            sudo apt-get install -y nodejs
             npm -v
             npm install 
             npm run build

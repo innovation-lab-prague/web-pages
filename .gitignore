@@ -4,3 +4,4 @@ dist
 .idea
 *.iml
 _site/*
+src/labRequests.js

@@ -26,6 +26,7 @@ $(document).ready(function() {
       timeFormat: 'H:mm',
       minTime: '08:00:00',
       maxTime: '18:00:00',
+      slotLabelFormat: 'H:mm',
       displayEventTime: true,     // Display event times
       resourceLabelText: 'Areas',
       schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',

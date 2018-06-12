@@ -1,0 +1,39 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to InnoLab Docs\n\n\nProudly presenting The Innovation Lab Prague - the right place for your creativity!", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#welcome-to-innolab-docs", 
+            "text": "Proudly presenting The Innovation Lab Prague - the right place for your creativity!", 
+            "title": "Welcome to InnoLab Docs"
+        }, 
+        {
+            "location": "/overview/", 
+            "text": "Overview\n\n\nAreas\n\n\n\n\nBrainstorming\n\n\nRound Table*\n\n\nLong Table*\n\n\nMeeting Room C13*\n\n\nFocus Room\n\n\n\n\nAreas marked by \n*\n are subject to reservation. Self-booking available \non GitHub\n.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/overview/#overview", 
+            "text": "", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/overview/#areas", 
+            "text": "Brainstorming  Round Table*  Long Table*  Meeting Room C13*  Focus Room   Areas marked by  *  are subject to reservation. Self-booking available  on GitHub .", 
+            "title": "Areas"
+        }, 
+        {
+            "location": "/faq/", 
+            "text": "Frequently Asked Questions\n\n\n\n\n\n\nQ: Is the Innovation Lab opened for everyone?\n\n\nA: Yes, it is place for coworking, meeting your colleagues, have a lunch or just relax.\n\n\n\n\n\n\nQ: Where are you located?\n\n\nA: Building F, on right side from the reception. To access 2nd floor, you need to authenticate in the elevator by using your access card - bigger reader.\n\n\n\n\n\n\nQ: Do you have better coffee?\n\n\nA: Not yet, but .. :)", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/faq/#frequently-asked-questions", 
+            "text": "Q: Is the Innovation Lab opened for everyone?  A: Yes, it is place for coworking, meeting your colleagues, have a lunch or just relax.    Q: Where are you located?  A: Building F, on right side from the reception. To access 2nd floor, you need to authenticate in the elevator by using your access card - bigger reader.    Q: Do you have better coffee?  A: Not yet, but .. :)", 
+            "title": "Frequently Asked Questions"
+        }
+    ]
+}

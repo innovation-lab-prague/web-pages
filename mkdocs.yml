@@ -1,0 +1,7 @@
+site_name: Innovation Lab Documentation
+repo_url: https://github.com/innovation-lab-prague/web-pages
+theme: material
+pages:
+- 'Introduction': index.md
+- 'Overview': overview.md
+- 'FAQ': faq.md
